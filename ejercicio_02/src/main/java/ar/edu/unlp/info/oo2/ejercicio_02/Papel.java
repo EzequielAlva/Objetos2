@@ -3,7 +3,7 @@ package ar.edu.unlp.info.oo2.ejercicio_02;
 public class Papel extends Elemento {
 
     public Papel(String name) {
-        super(name);
+        this.setName("papel");
     }
 
     @Override

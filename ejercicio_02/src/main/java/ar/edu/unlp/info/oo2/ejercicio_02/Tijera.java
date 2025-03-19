@@ -3,7 +3,7 @@ package ar.edu.unlp.info.oo2.ejercicio_02;
 public class Tijera extends Elemento {
 
     public Tijera(String name) {
-        super(name);
+        this.setName("tijera");
     }
 
     @Override

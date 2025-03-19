@@ -21,10 +21,10 @@ public class ArenaDeCombate {
 
         if(izq > der) {
             return "Elemento ganador: " + elementoIzquierda.getName() +
-                    "Elemento perdedor: " + elementoDerecha.getName();
+                    " Elemento perdedor: " + elementoDerecha.getName();
         } else if(der > izq) {
             return "Elemento perdedor: " + elementoIzquierda.getName() +
-                    "Elemento ganador: " + elementoDerecha.getName();
+                    " Elemento ganador: " + elementoDerecha.getName();
         }
 
         return "empate";

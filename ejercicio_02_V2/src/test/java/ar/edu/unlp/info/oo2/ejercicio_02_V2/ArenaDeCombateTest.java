@@ -16,5 +16,9 @@ public class ArenaDeCombateTest {
         arena.cargarElementos(new Papel(true), new Piedra(true));
         String resultado = arena.combate();
         System.out.println(resultado);
+
+        arena.cargarElementos(new Spock(true), new Lagarto(true));
+        resultado = arena.combate();
+        System.out.println(resultado);
     }
 }

@@ -3,7 +3,7 @@ package ar.edu.unlp.info.oo2.ejercicio_02;
 public class Piedra extends Elemento {
 
     public Piedra(String name) {
-        super(name);
+        this.setName("piedra");
     }
 
     @Override
