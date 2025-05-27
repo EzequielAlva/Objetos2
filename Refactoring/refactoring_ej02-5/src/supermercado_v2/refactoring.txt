@@ -1,0 +1,2 @@
+Bad Smell: Data Class
+Refactoring: Move Method

@@ -1,0 +1,2 @@
+Bad Smell: Middle Man
+Refactoring: Remove Middle Man

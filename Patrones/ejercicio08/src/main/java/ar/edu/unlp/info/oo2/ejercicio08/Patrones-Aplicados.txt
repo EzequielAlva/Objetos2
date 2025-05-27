@@ -1,0 +1,9 @@
+Strategy:
+CRCStrategy -> CRC16_Calculator
+CRCStrategy -> CRC32_Calculator
+- Esto permite que se utilicen otros algoritmos de cálculo CRC a futuro sin impactar en el resto del programa.
+
+Adapter:
+Connection -> Adapter4GConnection -> Connection4G
+- Esto permite acoplar la funcionalidad de la clase Connection4G a la de la interfaz Connection, sin modificar
+ni la clase ni la interfaz.

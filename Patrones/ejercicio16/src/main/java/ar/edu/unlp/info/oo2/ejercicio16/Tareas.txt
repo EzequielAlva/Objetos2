@@ -1,0 +1,41 @@
+Tareas:
+    1. Descargue el proyecto y pruebe los diferentes Filtros
+    2. Analice el código y documente el proyecto con un Diagrama de Clases
+    3. Evalúe cuál de los siguientes patrones mejor describe el diseño de los Filtros:
+    TemplateMethod, Strategy, Decorator. Para realizar la evaluación se sugiere
+    contestar las siguientes preguntas aplicadas a cada uno de los patrones:
+        a. ¿El objetivo del patrón se distingue en el diseño? Elabore en un párrafo.
+        b. ¿La estructura del proyecto coincide con la estructura y los participantes del
+        patrón? Elabore en un párrafo.
+        c. En el caso que el patrón coincida, puede distinguir un “smell” o algo que se
+        aleja del patrón presentado en el libro?
+    4. Se requiere crear el filtro Monochrome. El pseudo código para crear una imagen
+    monocrome es el siguiente:
+        - Parámetro de entrada: BufferedImage image
+            1. Por cada pixel en la imagen {
+                int pixel = image.getRGB(x, y);
+                int alpha = (pixel >> 24) & 0xff;
+                int red = (pixel >> 16) & 0xff;
+                int green = (pixel >> 8) & 0xff;
+                int blue = pixel & 0xff;
+                int avg = (red + green + blue) / 3;
+                pixel = (alpha << 24) | (avg << 16) | (avg << 8) | avg;
+                image.setRGB(x, y, pixel);
+            }
+
+1. -> No entiendo como hacerle
+2.  [PNGFilterLauncher] ------(activeFilters)---1..*-> [Filter]
+
+heredan de filter:                          [Dull] [Rainbow] [Repeater] [...]
+
+3.
+    a) El objetivo del patrón se distingue. Es profesar los filtros de la imágen uno detrás del otro.
+    b) La estructura del proyecto coincide en mayor medida:
+    - Filter sería el <Decorator>
+    - Las subclases de Filter son los <ConcreteDecorators>
+    - BufferedImage sería el <ConcreteComponent>
+    - En este caso no se utiliza una interfaz <IComponent>
+    c)
+    - Bad Smell: Código duplicado en clases Repeater y RGBShiftRepeater
+    - Algo que se aleje del patrón del libro: No me doy cuenta, puede ser la falta del <IComponent> ???
+

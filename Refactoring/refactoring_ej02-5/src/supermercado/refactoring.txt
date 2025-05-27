@@ -1,0 +1,2 @@
+Bad Smell: Breaking Encapsulation
+Refactoring: Encapsulate Field

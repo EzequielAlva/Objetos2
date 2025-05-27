@@ -1,0 +1,2 @@
+Bad Smell: Feature Envy
+Refactoring: Move Method y (Rename Method) -> nombre poco descriptivo

@@ -1,0 +1,2 @@
+Bad Smell: Hacer template por separado del extract method
+Refactoring:

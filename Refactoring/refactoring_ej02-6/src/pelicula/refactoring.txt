@@ -1,0 +1,7 @@
+Bad Smell: Breaking Encapsulation
+Refactoring: Encapsulate Field
+
+Notas:
+- En clase Pelicula: calcularCargoExtraPorEstreno() tiene la condicion al reves
+    debería ser "... < 30 ..." y no "... > 30 ..."
+- En clase Pelicula: agrego el atributo "costo" para que el IDE no chille.

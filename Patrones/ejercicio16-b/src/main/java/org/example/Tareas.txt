@@ -1,0 +1,15 @@
+3. Evalúe cuál de los siguientes patrones mejor describe el diseño de los Pipes:
+TemplateMethod, Strategy, Decorator. Para realizar la evaluación se sugiere
+contestar las siguientes preguntas aplicadas a cada uno de los patrones:
+    a. ¿El objetivo del patrón se distingue en el diseño? Elabore en un párrafo.
+    b. ¿La estructura del proyecto coincide con la estructura y los participantes del
+    patrón? Elabore en un párrafo.
+    c. En el caso que el patrón coincida, puede distinguir un “smell” o algo que se
+    aleja del patrón presentado en el libro?
+
+a. Si, es lo mismo que el anterior, con la diferencia de que ImageFilterPipe actúa como un wrapper.
+b. Si, coincide:
+    - BufferedImage <ConcreteComponent>
+    - ImageFilterPipeInterface y ImageFilter -> me confunden
+    - Los distintos filtros son los <ConcreteDecorator>
+c. Ni idea.

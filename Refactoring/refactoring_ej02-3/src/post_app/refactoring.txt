@@ -1,0 +1,2 @@
+Bad Smell: Long Method
+Refactoring: Extract Method

@@ -1,0 +1,4 @@
+Bad Smell: Reinventa la rueda
+Refactoring: Replace Loop with Pipeline
+
+hacer Replace temp
