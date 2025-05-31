@@ -12,5 +12,13 @@ public abstract class Elemento {
         this.name = name;
     }
 
-    public abstract String combate(Elemento elemento);
+    public String combate(Elemento elemento) {
+        return this.getName() + " vs " + elemento.getName() + ": ";
+    }
+
+    public abstract String contraPiedra();
+
+    public abstract String contraPapel();
+
+    public abstract String contraTijera();
 }

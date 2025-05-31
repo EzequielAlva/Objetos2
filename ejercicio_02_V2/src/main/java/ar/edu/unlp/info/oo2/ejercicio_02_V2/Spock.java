@@ -4,11 +4,37 @@ import java.util.List;
 
 public class Spock extends Elemento{
 
-    public Spock(boolean competitiveElement) {
-        this.setName("spock");
-        if(competitiveElement) {
-            this.setElementosSuperiores(List.of(new Papel(false), new Lagarto(false)));
-            this.setElementosInferiores(List.of(new Piedra(false), new Tijera(false)));
-        }
+    public Spock() {
+        this.setName("Spock");
+    }
+
+    @Override
+    public String contraPiedra() {
+        return this.getName() + " gana";
+    }
+
+    @Override
+    public String contraPapel() {
+        return this.getName() + " pierde";
+    }
+
+    @Override
+    public String contraTijera() {
+        return this.getName() + " gana";
+    }
+
+    @Override
+    public String combate(Elemento elemento) {
+        return super.combate(elemento) + elemento.contraSpock();
+    }
+
+    @Override
+    public String contraSpock() {
+        return this.getName() + " empata";
+    }
+
+    @Override
+    public String contraLagarto() {
+        return this.getName() + " pierde";
     }
 }

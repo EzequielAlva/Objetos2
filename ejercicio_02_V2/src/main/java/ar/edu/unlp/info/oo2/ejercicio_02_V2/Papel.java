@@ -1,15 +1,38 @@
 package ar.edu.unlp.info.oo2.ejercicio_02_V2;
 
-import java.util.List;
-
 public class Papel extends Elemento {
 
-    public Papel(boolean competitiveElement) {
-        this.setName("papel");
-        if(competitiveElement) {
-            this.setElementosSuperiores(List.of(new Tijera(false), new Lagarto(false)));
-            this.setElementosInferiores(List.of(new Piedra(false), new Spock(false)));
-        }
+    public Papel() {
+        this.setName("Papel");
     }
 
+    @Override
+    public String contraPiedra() {
+        return this.getName() + " gana";
+    }
+
+    @Override
+    public String contraPapel() {
+        return this.getName() + " empata";
+    }
+
+    @Override
+    public String contraTijera() {
+        return this.getName() + " pierde";
+    }
+
+    @Override
+    public String combate(Elemento elemento) {
+        return super.combate(elemento) + elemento.contraPapel();
+    }
+
+    @Override
+    public String contraSpock() {
+        return this.getName() + " gana";
+    }
+
+    @Override
+    public String contraLagarto() {
+        return this.getName() + " pierde";
+    }
 }

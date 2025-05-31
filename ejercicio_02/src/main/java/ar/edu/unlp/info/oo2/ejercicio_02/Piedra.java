@@ -2,17 +2,27 @@ package ar.edu.unlp.info.oo2.ejercicio_02;
 
 public class Piedra extends Elemento {
 
-    public Piedra(String name) {
-        this.setName("piedra");
+    public Piedra() {
+        this.setName("Piedra");
+    }
+
+    @Override
+    public String contraPiedra() {
+        return this.getName() + " empata";
+    }
+
+    @Override
+    public String contraPapel() {
+        return this.getName() + " pierde";
+    }
+
+    @Override
+    public String contraTijera() {
+        return this.getName() + " gana";
     }
 
     @Override
     public String combate(Elemento elemento) {
-        if(elemento.getName().equals("tijera"))
-            return "win";
-        else if(elemento.getName().equals("papel"))
-            return "lose";
-        else
-            return "draw";
+        return super.combate(elemento) + elemento.contraPiedra();
     }
 }
