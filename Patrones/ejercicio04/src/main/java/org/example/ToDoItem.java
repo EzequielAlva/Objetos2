@@ -21,7 +21,7 @@ public class ToDoItem {
 
     public ToDoItem(String name, ItemState state) {
         this(name);
-        this.state = state;
+        this.changeState(state);
         this.comments = new ArrayList<>();
     }
 
@@ -97,5 +97,10 @@ public class ToDoItem {
 
     public String getName() {
         return name;
+    }
+
+    // Creado con el único propósito de testear más fácilmente
+    public ItemState getState() {
+        return state;
     }
 }
