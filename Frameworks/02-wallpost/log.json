@@ -1,0 +1,10 @@
+{"level": "INFO", "message": " // -- APLICACION INICIADA -- //"}
+{"level": "INFO", "message": " -> Se ha dado like"}
+{"level": "INFO", "message": " -> Se ha dado like"}
+{"level": "INFO", "message": " -> Se ha dado dislike"}
+{"level": "INFO", "message": " -> Se ha dado dislike"}
+{"level": "WARNING", "message": " -- Llegando a 0 likes -- "}
+{"level": "INFO", "message": " -> Se ha dado dislike"}
+{"level": "WARNING", "message": " -- Llegando a 0 likes -- "}
+{"level": "INFO", "message": " -> Se ha dado dislike"}
+{"level": "WARNING", "message": " -- Llegando a 0 likes -- "}

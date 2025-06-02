@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-06-01T21:43:04.061858500Z</date>
+  <millis>1748814184061</millis>
+  <nanos>858500</nanos>
+  <sequence>0</sequence>
+  <logger>ar.edu.unlp.oo1.ejercicio1.impl.WallPostImpl</logger>
+  <level>INFO</level>
+  <class>ar.edu.unlp.oo1.ejercicio1.app.Ejercicio1Application</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message> // -- APLICACION INICIADA -- //</message>
+</record>
+<record>
+  <date>2025-06-01T21:43:17.921145100Z</date>
+  <millis>1748814197921</millis>
+  <nanos>145100</nanos>
+  <sequence>1</sequence>
+  <logger>ar.edu.unlp.oo1.ejercicio1.impl.WallPostImpl</logger>
+  <level>INFO</level>
+  <class>ar.edu.unlp.oo1.ejercicio1.impl.WallPostImpl</class>
+  <method>like</method>
+  <thread>23</thread>
+  <message> -&gt; Se ha dado like</message>
+</record>
+</log>
