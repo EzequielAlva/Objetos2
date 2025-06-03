@@ -1,5 +1,4 @@
-package post_app_v3;
-
+package post_app_v4;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,12 +13,8 @@ public class PostApp {
 
         ordenarPostsPorFecha(postsOtrosUsuarios);
 
-        return  agregarUltimosPosts(postsOtrosUsuarios, cantidad);
-
-    }
-
-    private List<Post> agregarUltimosPosts(List<Post> postsOtrosUsuarios, int cantidad) {
         return postsOtrosUsuarios.stream().limit(cantidad).collect(Collectors.toList());
+
     }
 
     private List<Post> obtenerPostsDeOtrosUsuarios(Usuario user) {

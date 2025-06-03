@@ -1,0 +1,2 @@
+Bad Smell: Complejización innecesaria
+Refactoring: Replace Method with Pipeline

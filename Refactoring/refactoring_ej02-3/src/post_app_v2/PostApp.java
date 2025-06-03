@@ -9,18 +9,20 @@ public class PostApp {
     private List<Post> posts;
     // . . .
     public List<Post> ultimosPosts(Usuario user, int cantidad) {
-
         List<Post> postsOtrosUsuarios = obtenerPostsDeOtrosUsuarios(user);
 
-        // ordena los posts por fecha
         ordenarPostsPorFecha(postsOtrosUsuarios);
 
+        return agregarUltimosPosts(postsOtrosUsuarios, cantidad);
+    }
+
+    private List<Post> agregarUltimosPosts(List<Post> postsOtrosUsuarios, int cantidad) {
+        Iterator<Post> postIterator = postsOtrosUsuarios.iterator();
         List<Post> ultimosPosts = new ArrayList<Post>();
         int index = 0;
-        Iterator<Post> postIterator = postsOtrosUsuarios.iterator();
         while (postIterator.hasNext() &&  index < cantidad) {
             ultimosPosts.add(postIterator.next());
-        } // -> extraer a este también
+        }
         return ultimosPosts;
     }
 

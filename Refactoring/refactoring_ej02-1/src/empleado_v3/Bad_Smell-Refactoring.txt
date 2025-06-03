@@ -1,2 +1,2 @@
 Bad Smell: Duplicated Code
-Refactoring: Extract Method, Template Method
+Refactoring: Extract Method

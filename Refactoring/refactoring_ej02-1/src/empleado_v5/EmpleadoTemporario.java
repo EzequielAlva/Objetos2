@@ -1,4 +1,4 @@
-package empleado_v4;
+package empleado_v5;
 
 public class EmpleadoTemporario extends Empleado {
     private double horasTrabajadas;
@@ -9,11 +9,6 @@ public class EmpleadoTemporario extends Empleado {
         super(nombre, apellido, sueldoBasico);
         this.horasTrabajadas = horasTrabajadas;
         this.cantidadHijos = cantidadHijos;
-    }
-
-    @Override
-    public double sueldo() {
-        return this.getSueldoBasico() - (this.getSueldoBasico() * 0.13) + bonoExtra();
     }
 
     @Override

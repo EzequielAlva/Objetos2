@@ -1,4 +1,4 @@
-package empleado_v4;
+package empleado_v5;
 
 public class EmpleadoPlanta extends Empleado {
     private int cantidadHijos;
@@ -6,11 +6,6 @@ public class EmpleadoPlanta extends Empleado {
     public EmpleadoPlanta(String nombre, String apellido, double sueldoBasico, int cantidadHijos) {
         super(nombre, apellido, sueldoBasico);
         this.cantidadHijos = cantidadHijos;
-    }
-
-    @Override
-    public double sueldo() {
-        return this.getSueldoBasico() - (this.getSueldoBasico() * 0.13) + bonoExtra();
     }
 
     @Override

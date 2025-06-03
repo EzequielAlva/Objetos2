@@ -1,2 +1,2 @@
-Bad Smell: Hacer template por separado del extract method
-Refactoring:
+Bad Smell: Duplicated Code
+Refactoring: Template Method

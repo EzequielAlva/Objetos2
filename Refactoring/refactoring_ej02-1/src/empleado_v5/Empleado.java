@@ -1,4 +1,4 @@
-package empleado_v4;
+package empleado_v5;
 
 public abstract class Empleado {
     private String nombre;
@@ -23,7 +23,9 @@ public abstract class Empleado {
         return this.sueldoBasico;
     }
 
-    public abstract double sueldo();
+    public double sueldo() {
+        return this.getSueldoBasico() - (this.getSueldoBasico() * 0.13) + bonoExtra();
+    }
 
     protected abstract double bonoExtra();
 }
