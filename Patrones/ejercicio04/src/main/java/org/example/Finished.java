@@ -3,6 +3,9 @@ package org.example;
 import java.time.Duration;
 
 public class Finished extends ItemState {
+    public Finished(ToDoItem toDoItem) {
+        super(toDoItem);
+    }
 
     @Override
     public Duration workedTime() {

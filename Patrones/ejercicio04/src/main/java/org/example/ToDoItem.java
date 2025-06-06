@@ -17,11 +17,7 @@ public class ToDoItem {
      */
     public ToDoItem(String name) {
         this.name = name;
-    }
-
-    public ToDoItem(String name, ItemState state) {
-        this(name);
-        this.changeState(state);
+        this.changeState(new Pending(this));
         this.comments = new ArrayList<>();
     }
 
@@ -72,7 +68,6 @@ public class ToDoItem {
 
     public void changeState(ItemState state) {
         this.state = state;
-        state.setToDoItem(this);
     }
 
     public LocalDateTime getInitialTime() {

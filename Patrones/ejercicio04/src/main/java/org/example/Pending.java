@@ -5,9 +5,13 @@ import java.time.LocalDateTime;
 
 public class Pending extends ItemState {
 
+    public Pending(ToDoItem toDoItem) {
+        super(toDoItem);
+    }
+
     @Override
     public void start() {
-        this.getToDoItem().changeState(new InProgress());
+        this.getToDoItem().changeState(new InProgress(this.getToDoItem()));
         this.getToDoItem().setInitialTime(LocalDateTime.now());
     }
 

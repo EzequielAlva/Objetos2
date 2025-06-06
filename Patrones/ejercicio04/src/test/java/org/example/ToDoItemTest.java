@@ -11,8 +11,8 @@ public class ToDoItemTest {
 
     @BeforeEach
     void setUp() {
-        toDoItem1 = new ToDoItem("Hacer Comentario", new Pending());
-        toDoItem2 = new ToDoItem("Hacer Comentario", new Finished());
+        toDoItem1 = new ToDoItem("Hacer Comentario");
+        toDoItem2 = new ToDoItem("Hacer Otro Comentario");
     }
 
     @Test
@@ -27,6 +27,8 @@ public class ToDoItemTest {
         assertTrue(toDoItem1.getState() instanceof InProgress);
 
         // ToDoItem 2
+        toDoItem2.start();
+        toDoItem2.finish();
         assertTrue(toDoItem2.getState() instanceof Finished);
         toDoItem2.start();
         assertTrue(toDoItem2.getState() instanceof Finished);

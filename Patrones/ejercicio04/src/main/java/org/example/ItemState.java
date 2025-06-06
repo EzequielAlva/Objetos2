@@ -6,16 +6,12 @@ import java.time.LocalDateTime;
 public abstract class ItemState {
     private ToDoItem toDoItem;
 
-    public ItemState() {
-
+    public ItemState(ToDoItem toDoItem) {
+        this.toDoItem = toDoItem;
     }
 
     protected ToDoItem getToDoItem() {
         return toDoItem;
-    }
-
-    public void setToDoItem(ToDoItem toDoItem) {
-        this.toDoItem = toDoItem;
     }
 
     public void start() {
