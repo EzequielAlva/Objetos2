@@ -35,10 +35,8 @@ public abstract class WeatherDecorator implements WeatherData {
 
     @Override
     public String displayData() {
-        return this.weather.displayData();
+        return this.weather.displayData() + this.addedInformation();
     }
 
-    protected double redondearValor(Double valor) {
-        return Math.round(valor);
-    }
+    protected abstract String addedInformation();
 }

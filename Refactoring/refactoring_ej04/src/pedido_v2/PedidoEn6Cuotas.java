@@ -1,7 +1,5 @@
 package pedido_v2;
 
-import pedido.Cliente;
-
 import java.util.List;
 
 public class PedidoEn6Cuotas extends Pedido {

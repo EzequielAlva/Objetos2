@@ -1,18 +1,18 @@
-package org.example.Personajes;
+package org.example.Builder;
 
 public abstract class PersonajeBuilder {
     private Personaje personaje;
 
     public PersonajeBuilder() {
-
+        this.personaje = new Personaje();
     }
 
     protected Personaje getPersonaje() {
         return personaje;
     }
 
-    public void reset(String nombre, int vida) {
-        this.personaje = new Personaje(nombre, vida);
+    public void reset() {
+        this.personaje = new Personaje();
     }
 
     public abstract void agregarArma();
@@ -22,10 +22,10 @@ public abstract class PersonajeBuilder {
     public abstract void agregarHabilidad();
 
     public Personaje crearPersonaje(String nombre, int vida) {
-        this.reset(nombre, vida);
-        this.agregarArma();
-        this.agregarArmadura();
-        this.agregarHabilidad();
-        return this.personaje;
+        Personaje nuevoPersonaje = this.personaje;
+        nuevoPersonaje.setNombre(nombre);
+        nuevoPersonaje.setVida(vida);
+        this.reset();
+        return nuevoPersonaje;
     }
 }

@@ -1,10 +1,10 @@
-package org.example.Personajes;
+package org.example.Builder;
 
 import org.example.Armaduras.ArmaduraDeCuero;
 import org.example.Armas.Arco;
 import org.example.Habilidades.CombateADistancia;
 
-public class Arquero extends PersonajeBuilder {
+public class ArqueroBuilder extends PersonajeBuilder {
     @Override
     public void agregarArma() {
         this.getPersonaje().setArma(new Arco());

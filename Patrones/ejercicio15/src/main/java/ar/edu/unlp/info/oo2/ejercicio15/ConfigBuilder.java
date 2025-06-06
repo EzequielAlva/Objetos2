@@ -31,12 +31,8 @@ public abstract class ConfigBuilder {
     }
 
     public Equipo crearEquipo() {
+        Equipo armado = this.equipo;
         this.reset();
-        this.agregarProcesador();
-        this.agregarRam();
-        this.agregarDisco();
-        this.agregarGrafica();
-        this.agregarGabinete();
-        return this.getEquipo();
+        return armado;
     }
 }

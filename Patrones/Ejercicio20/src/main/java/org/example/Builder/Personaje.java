@@ -1,4 +1,4 @@
-package org.example.Personajes;
+package org.example.Builder;
 
 import org.example.Armaduras.Armadura;
 import org.example.Armas.Arma;
@@ -6,7 +6,6 @@ import org.example.Habilidades.Habilidad;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class Personaje {
     private String nombre;
@@ -15,10 +14,8 @@ public class Personaje {
     private List<Habilidad> habilidades;
     private int vida;
 
-    public Personaje(String nombre, int vida) {
-        this.nombre = nombre;
+    public Personaje() {
         this.habilidades = new ArrayList<>();
-        this.vida = vida;
     }
 
     public String getNombre() {
@@ -43,6 +40,10 @@ public class Personaje {
 
     public int getVida() {
         return vida;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
     }
 
     public void setArma(Arma arma) {
@@ -74,5 +75,28 @@ public class Personaje {
 
     public boolean poseeCuracion() {
         return getHabilidades().stream().anyMatch(elem -> elem.getNombre().equals("Curacion"));
+    }
+
+    public String atacarPersonaje(Personaje defensor) {
+        int vidaAtacante = this.getVida();
+        int vidaDefensor = defensor.getVida();
+
+        while(vidaAtacante > 0 && vidaDefensor > 0) {
+            vidaDefensor -= (this.calcularDanioDeAtaque(defensor.getArmadura())
+                    - resolverCuracion(defensor.poseeCuracion(), defensor));
+
+            vidaAtacante -= (defensor.calcularDanioDeAtaque(this.getArmadura())
+                    - resolverCuracion(this.poseeCuracion(), this));
+        }
+
+        return "Ganador el " + ((vidaAtacante > vidaDefensor)
+                ? "atacante: " + this.getNombre()
+                : "defensor: " + defensor.getNombre());
+    }
+
+    private int resolverCuracion(boolean puedeCurar, Personaje personaje) {
+        if(puedeCurar)
+            return personaje.curar();
+        return 0;
     }
 }

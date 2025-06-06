@@ -24,9 +24,9 @@ public class Equipo {
     }
 
     // no se a que se refiere con "Crear Presupuesto" <-------------
-    public double crearPresupuesto() {
+    /*public double crearPresupuesto() {
         return componentes.stream().mapToDouble(Componente::getPrecio).sum();
-    }
+    }*/
 
     public double calcularPrecio() {
         double total = componentes.stream().mapToDouble(Componente::getPrecio).sum();

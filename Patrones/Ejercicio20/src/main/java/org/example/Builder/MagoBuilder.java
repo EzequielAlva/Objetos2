@@ -1,4 +1,4 @@
-package org.example.Personajes;
+package org.example.Builder;
 
 
 import org.example.Armaduras.ArmaduraDeCuero;
@@ -6,7 +6,7 @@ import org.example.Armas.Baston;
 import org.example.Habilidades.CombateADistancia;
 import org.example.Habilidades.Magia;
 
-public class Mago extends PersonajeBuilder {
+public class MagoBuilder extends PersonajeBuilder {
     @Override
     public void agregarArma() {
         this.getPersonaje().setArma(new Baston());
